@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        {% block content %}
+            {% for library in object_list %}
+                <div><a href="{% url 'library_detail' library.slug %}">{{ library.name }}</a></div>
+            {% endfor %}
+        {% endblock content %}
+    </body>
+</html>

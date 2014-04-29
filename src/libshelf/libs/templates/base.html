@@ -1,0 +1,21 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Website{% endblock title %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        {% load static %}
+        <script src="{% static "dajax/jquery.dajax.core.js" %}"></script>
+        
+    </head>
+    <body>
+        <h1>Website header</h1>
+        {% block content %}
+            Website content
+        {% endblock content %}
+        <button onclick="Dajax.example.myexample(Dajax.process);">Click here!</button>
+    </body>
+</html>
